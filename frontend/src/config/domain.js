@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'TRANSLATORAI',systemName:'知华企业翻译智能体',englishName:'ENTERPRISE TRANSLATION AI',theme:{primary:'#3e6292',dark:'#223149',accent:'#c88b52'},
  workspace:'全球内容中心 / 语言运营组',fieldWorkspace:'产品文档组 / 中英译审',period:'2026-08-17 · 第 34 周',liveText:'术语库于 14:08 同步',fieldContextLabel:'当前语言对',fieldContext:'简体中文 → 英语',fieldUser:'苏禾',fieldRole:'译审专员',adminUser:'陆闻',adminRole:'语言平台主管',
