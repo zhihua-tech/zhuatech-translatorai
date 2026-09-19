@@ -1,7 +1,13 @@
 /* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.translatorai.config;
 import cn.zhuatech.translatorai.model.*; import cn.zhuatech.translatorai.repository.*; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.*; import org.springframework.security.crypto.password.PasswordEncoder; import java.time.LocalDate; import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Configuration public class DataInitializer {
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  @Bean CommandLineRunner seed(OperatingUnitRepository units,WorkRecordRepository tasks,ResourceRegisterRepository resources,ReviewRecordRepository reviews,UserRepository users,PasswordEncoder encoder){return args->{if(units.count()>0)return;
  var u1=units.save(new OperatingUnit("LANG-OPS","语言运营组","全球内容中心",300));var u2=units.save(new OperatingUnit("DOC-TEAM","产品文档组","工业产品中心",220));var u3=units.save(new OperatingUnit("LEGAL-LANG","法律语言组","国际法务中心",120));
  var t1=tasks.save(new WorkRecord("TR-260817-052","DOC-GW-032","智能网关安装手册 v3.2",u2,286,198,12,LocalDate.now().plusDays(1),WorkRecord.Status.RUNNING,"zh-CN→en-US"));var t2=tasks.save(new WorkRecord("TR-260817-048","LEGAL-EU-26","欧洲经销协议 2026",u3,164,82,9,LocalDate.now().plusDays(2),WorkRecord.Status.RUNNING,"zh-CN→de-DE"));var t3=tasks.save(new WorkRecord("TR-260817-043","APP-RN-826","移动端更新说明",u1,48,48,1,LocalDate.now(),WorkRecord.Status.RELEASED,"zh-CN→ja-JP"));var t4=tasks.save(new WorkRecord("TR-260816-036","SQM-GUIDE","供应商质量规范",u2,126,126,3,LocalDate.now().minusDays(1),WorkRecord.Status.COMPLETED,"zh-CN→en-US"));

@@ -7,12 +7,21 @@ import jakarta.validation.Valid;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/ai/translation")
 @PreAuthorize("hasAnyRole('DOMAIN_USER','DOMAIN_OPERATOR','ADMIN')")
 public class TranslationReviewController {
     private final TranslationReviewService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public TranslationReviewController(TranslationReviewService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/review-plan")
     public ApiResponse<TranslationReviewService.Result> create(@Valid @RequestBody TranslationReviewService.Request request) {
         return ApiResponse.ok("译审计划已生成", service.createReviewPlan(request));

@@ -9,9 +9,16 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 依据术语覆盖、模型置信度与文档风险生成译审计划。 */
+/**
+ * 依据术语覆盖、模型置信度与文档风险生成译审计划。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class TranslationReviewService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result createReviewPlan(Request request) {
         int score = Math.max(0, 100 - request.modelConfidencePercent());
         score += Math.max(0, 85 - request.glossaryCoveragePercent()) / 2;
@@ -30,12 +37,18 @@ public class TranslationReviewService {
             score >= 70 ? "HIGH" : score >= 40 ? "MEDIUM" : "LOW", route, minutes, checks, controls);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String documentNo, @NotBlank String sourceLanguage,
                           @NotBlank String targetLanguage, @Min(1) int wordCount,
                           @Min(0) @Max(100) int glossaryCoveragePercent,
                           @Min(0) @Max(100) int modelConfidencePercent,
                           @Min(1) @Max(5) int layoutComplexity,
                           boolean confidential, boolean legalDocument) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String documentNo, String languagePair, int reviewScore, String riskTier,
                          String reviewRoute, int estimatedReviewMinutes,
                          List<String> checks, List<String> controls) {}
