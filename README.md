@@ -1,5 +1,7 @@
 # ZhuaTech TranslatorAI
 
+2026-10-23 功能更新：**翻译占位符与术语一致性检查**。按出现次数检查变量、格式占位符和 HTML 标签是否被翻译丢失，并逐条检查必需术语。是确定性 QA，不声称验证翻译语义质量。 [接口、操作与边界说明](docs/AI_PRACTICAL_UPGRADE_20261023.md)。
+
 [简体中文](README.md) | [English](README.en.md)
 
 ## 企业多语言内容，从机器草稿到人工发布
