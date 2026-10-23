@@ -1,0 +1,102 @@
+{
+  "slug": "translatorai",
+  "title": "译文长度与占位符齐套核对",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "sourceChars",
+      "label": "源文Unicode字符数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "targetChars",
+      "label": "译文Unicode字符数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "capacityChars",
+      "label": "界面字符容量",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "requiredPlaceholders",
+      "label": "源文占位符个数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "matchedPlaceholders",
+      "label": "正确匹配个数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "extraPlaceholders",
+      "label": "额外占位符个数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "expansionWarning",
+      "label": "扩张警戒增幅%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "targetToSourcePct",
+      "label": "译源长度比%"
+    },
+    {
+      "key": "overflowChars",
+      "label": "溢出字符"
+    },
+    {
+      "key": "missingPlaceholders",
+      "label": "缺失占位符"
+    }
+  ],
+  "description": "结合界面字符容量、源/译文字数及占位符数量，检测界面溢出和待复核译文；不声称完成语义翻译或逐token占位符一致性校验。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "sourceChars": "50",
+        "targetChars": "65",
+        "capacityChars": "80",
+        "requiredPlaceholders": "3",
+        "matchedPlaceholders": "3",
+        "extraPlaceholders": "0",
+        "expansionWarning": "50"
+      }
+    ]
+  }
+}

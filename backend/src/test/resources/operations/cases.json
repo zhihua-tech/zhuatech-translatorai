@@ -1,0 +1,63 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "targetChars": "81"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "overflowChars": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "matchedPlaceholders": "2"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "extraPlaceholders": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "targetChars": "76"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "targetChars": "75"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "matchedPlaceholders": "4"
+    },
+    "expected": {},
+    "error": true
+  }
+]
