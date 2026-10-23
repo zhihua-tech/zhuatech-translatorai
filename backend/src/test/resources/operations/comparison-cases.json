@@ -1,0 +1,80 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    }
+  },
+  {
+    "patch": {
+      "targetChars": "81"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "overflowChars": "#1"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    }
+  },
+  {
+    "patch": {
+      "matchedPlaceholders": "2"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    }
+  },
+  {
+    "patch": {
+      "extraPlaceholders": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    }
+  },
+  {
+    "patch": {
+      "targetChars": "76"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    }
+  },
+  {
+    "patch": {
+      "targetChars": "75"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "targetToSourcePct": "#130"
+    }
+  }
+]

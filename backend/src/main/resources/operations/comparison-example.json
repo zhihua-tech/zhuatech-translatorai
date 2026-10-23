@@ -1,0 +1,6 @@
+{
+  "patch": {
+    "targetChars": "81"
+  },
+  "description": "译文Unicode字符数改为81"
+}
